@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: 'Production'
+      name: 'Development'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -58,7 +58,7 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'Yousif-assignment-app-bicep-dev-BE'
-          slot-name: 'development'
+          slot-name: 'Development'
   deploy-prod:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
