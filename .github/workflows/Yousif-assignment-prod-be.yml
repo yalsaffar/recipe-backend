@@ -58,7 +58,7 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'Yousif-assignment-app-bicep-dev-BE'
-          slot-name: 'Development'
+          
   deploy-prod:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -84,5 +84,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'Yousif-assignment-app-bicep-prod-BE'
-          slot-name: 'Production'
+
 
